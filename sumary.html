@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>event sumarry</title>
+</head>
+<body>
+                    <h1 id="mouse-header">more mose</h1>
+   <input type="email" class="" id="email-field">                 
+   <button onclick="handleClick()">click me</button>  
+   <button id="yellow">click me</button>  
+   
+   <script>
+                       function handleClick(){
+                                           document.body.style.backgroundColor='green';
+                       }
+
+                       document.getElementById("yellow").addEventListener('click',function(){
+                                           document.body.style.backgroundColor="yellow"
+                       })
+
+                       document.getElementById('email-field').addEventListener('keyup',function(event){
+                                           console.log(event.target.value);
+                       })
+   
+//    document.getElementById('mouse-header').addEventListener('mousemove',function(){
+//                        console.log("mouse move koris na");
+//    })
+//    document.getElementById('mouse-header').addEventListener('mouseenter',function(){
+//                        console.log("mouse move koris na");
+//    })
+   document.getElementById('mouse-header').addEventListener('mouseout',function(){
+                       console.log("mouse sore km");
+   })
+   </script>
+</body>
+</html>

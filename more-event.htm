@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+</head>
+<body>
+                    <h2>more event</h2>
+                    <section>
+                                        <h3  id="secret-info">very very secrite information</h3>
+                                        <input type="text" id="delete-confrim" value="" placeholder="please type delete">
+                                        <button id="delete-btn" disabled>Delete</button>
+                    </section>
+
+                    
+<script>
+                    document.getElementById('delete-btn').addEventListener('click',function(){
+const deleteSecret =document.getElementById('secret-info');
+deleteSecret.style.display='none';
+                    })
+
+                    // focus
+                    document.getElementById('delete-confrim').addEventListener('focus',function(){
+// const deleteSecret =document.getElementById('secret-info');
+// deleteSecret.style.display='none';
+document.body.style.backgroundColor='lightcoral'
+                    })
+// blur
+document.getElementById('delete-confrim').addEventListener('blur',function(){
+// const deleteSecret =document.getElementById('secret-info');
+// deleteSecret.style.display='none';
+document.body.style.backgroundColor='white'
+                    })
+// keysdowm
+// document.getElementById('delete-confrim').addEventListener('keydown',function(){
+// // const deleteSecret =document.getElementById('secret-info');
+// // deleteSecret.style.display='none';
+// // document.body.style.backgroundColor='green'
+// const deleteField=document.getElementById('delete-confrim');
+// // console.log(deleteField.value);
+//                     })
+
+// keypress
+// document.getElementById('delete-confrim').addEventListener('keypress',function(){
+// // const deleteSecret =document.getElementById('secret-info');
+// // deleteSecret.style.display='none';
+// // document.body.style.backgroundColor='green'
+// const deleteField=document.getElementById('delete-confrim');
+// console.log(deleteField.value);
+//                     })
+// keyup                    
+document.getElementById('delete-confrim').addEventListener('keyup',function(event){
+
+console.log(event.target.value);
+const deleteBtn=document.getElementById('delete-btn')
+if(event.target.value==='delete'){
+                    deleteBtn.removeAttribute('disabled')
+}
+
+else{
+                    deleteBtn.setAttribute('disabled',true)
+}                 
+
+                    })
+// change                    
+document.getElementById('delete-confrim').addEventListener('change',function(event){
+// const deleteSecret =document.getElementById('secret-info');
+// deleteSecret.style.display='none';
+// document.body.style.backgroundColor='green'
+// const deleteField=document.getElementById('delete-confrim');
+// console.log(deleteField.value);
+const deleteBtn=document.getElementById('delete-btn')
+if(event.target.value==='delete'){
+                    deleteBtn.removeAttribute('disabled')
+}
+
+else{
+                    deleteBtn.setAttribute('disabled',true)
+}                 
+
+
+                    })
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+</head>
+<body>
+                    <h2>Add your comment please</h2>
+                    <section>
+                                        <h4> your comment</h4>
+                                        <div id="comment-container">
+                                                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta illum quia ducimus veniam perferendis?</p> -->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, soluta alias necessitatibus neque earum omnis!</p>
+<p>Consequatur aliquam a obcaecati porro! Magnam voluptatem nesciunt voluptatum deserunt atque minima dolorem quisquam consequatur!</p>                                        </div>
+<div>
+                    <!-- <p>add your comment</p> -->
+
+<textarea name="" id="new-comment" cols="40" rows="4"></textarea>
+<br>
+<button id="post-comment">post</button>
+</div>
+                    </section>
+
+                    <script>
+//    1 set button event addEventListener
+                                        document.getElementById("post-comment").addEventListener('click',function(){
+                                                            // console.log('clicked');
+
+                                                            // get user comment
+const commentBox=document.getElementById('new-comment')
+// console.log(commentBox);; 
+const userComment =commentBox.value;
+// console.log(userComment);
+//3 .create  comment paragraph
+const newComment=document.createElement('p');
+newComment.innerText=userComment
+// console.log(newComment.innerText)
+
+// 4 append the comment
+const commentContainer=document.getElementById('comment-container');
+commentContainer.appendChild(newComment);
+
+//5 clen the comment box
+commentBox.value='';
+})
+                    </script>
+</body>
+</html>

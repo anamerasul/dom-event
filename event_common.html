@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Event common</title>
+</head>
+<body>
+                    <p id='clicking-method'></p>
+
+                    <input id="name-field" type="text">
+                    <button id='update-name'>update</button>
+                    <button onclick='handleJustFunctionClick()'>Just function</button>
+                    <button id="handle-event-direct">direct add event liser</button>
+
+                    <script>
+
+                                        // function
+                                        function handleJustFunctionClick(){
+                                                            const p=document.getElementById('clicking-method')
+                                                            p.innerText='set by functon';
+                                        }
+
+                                        // direct
+                                        document.getElementById('handle-event-direct').addEventListener('click', function(){
+                                                            const p=document.getElementById('clicking-method')
+                                                            p.innerText="add by direct add event liser"
+                                        })
+
+                                        // dirctt 2
+document.getElementById('update-name').addEventListener('click',function(){
+const nameField=document.getElementById('name-field');
+// console.log(nameField.value);
+const p=document.getElementById('clicking-method')
+                                                            p.innerText=nameField.value;  
+                                    nameField.value='';                            
+
+} )
+                       
+                    </script>
+</body>
+</body>
+</html>

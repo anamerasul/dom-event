@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>event bubble</title>
+</head>
+<body>
+<h2>bubble vi</h2>
+
+<section id="section-container">
+                    <h4>bubble vi list</h4>
+                    <ul id="list-container">
+                                        <li class="list">Lorem, ipsum.</li>
+<br>
+                                        <li id="second-item" class="list">Deleniti, repudiandae?</li>
+                                        <li class="list">Velit, alias?</li>
+                                        <li class="list">Unde, ea!</li>
+                                        <li class="list">Vel, at.</li>
+                                        <li class="list">Perspiciatis, illo.</li>
+                    </ul>
+</section>
+
+<script>
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked1');
+                                        // event.stopPropagation();
+                                        event.stopImmediatePropagation();
+
+
+                    })                                        
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked2');
+                                        // event.stopPropagation();
+
+
+                    })                                        
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked3');
+                                        // event.stopPropagation();
+
+
+                    })                                        
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked4');
+                                        // event.stopPropagation();
+
+
+                    })                                        
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked5');
+                                        // event.stopPropagation();
+
+
+                    })                                        
+                    document.getElementById('second-item').addEventListener('click', function(event){
+                                        console.log('second item clicked6');
+                                        // event.stopPropagation();
+
+
+                    })                                        
+// ul
+                   
+                    document.getElementById('list-container').addEventListener('click', function(event){
+                                        console.log('ul clicked');
+                                        event.stopImmediatePropagation();
+                    })
+
+                    // section cloick
+                    document.getElementById('section-container').addEventListener('click', function(){
+                                        console.log('section clicked');
+                    })
+</script>
+</body>
+</html>
